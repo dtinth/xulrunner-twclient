@@ -1,8 +1,7 @@
-
 dialog#commonDialog {
     -moz-appearance: none !important;
     background: #454443 !important;
-    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 dialog#commonDialog #checkboxContainer,
 [id="info.icon"], [id="info.title"], [id="info.header"] { display: none !important; }
@@ -34,17 +33,43 @@ button {
     height: 27px !important;
     width: 70px !important;
     cursor: pointer !important;
-    border: 0px !important;
+    border: 1px solid #090807 !important;
 }
 button:hover {
     background: #555453 !important;
 }
 button:focus {
     background: #555453 !important;
-	outline: 1px solid #8b8685 !important;
+	border-color: #8b8685 !important;
 }
 button[dlgtype="accept"] .button-text {
     font-weight: bold !important;
     color: #d7fc70 !important;
 }
 
+@media all and (-moz-windows-compositor) {
+	dialog#commonDialog {
+		-moz-appearance: -moz-win-glass !important;
+		background: transparent !important;
+	}
+	.textbox-input {
+		border-color: rgba(255,255,255,0.4) !important;
+		background: rgba(9,8,7,0.7) !important;
+	}
+	.textbox-input {
+		box-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+	}
+	button {
+		box-shadow: 0 0 4px rgba(255,255,255,0.5) !important;
+	}
+	button:focus {
+		box-shadow: 0 0 6px rgba(255,255,255,0.9) !important;
+		border-color: #000 !important;
+	}
+	.textbox-input:focus {
+		border-color: rgba(255,255,255,0.6) !important;
+	}
+	[id="info.body"] {
+		text-shadow: 0 1px 2px #000, 0 1px 3px #000 !important;
+	}
+}

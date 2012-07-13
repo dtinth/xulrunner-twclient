@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://tw/content/dialog.css" type="text/css"?>
 <overlay id="dialogoverlay-tw" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <dialog id="commonDialog">
+    <script type="text/javascript">
+      window.addEventListener('load', function() {
+        if (document.title.match(/^The page at https?:\/\/tw3\.herokuapp\.com says:$/)) {
+          document.title = ''
+        }
+      }, false);
+    </script>
+  </dialog>
 </overlay>
-
