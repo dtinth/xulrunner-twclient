@@ -1,0 +1,2 @@
+content tw chrome/content/
+overlay     chrome://global/content/commonDialog.xul chrome://tw/content/dialog-overlay.xul

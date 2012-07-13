@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://global/content/editMenuOverlay.xul"?>
+
+<window id="tw-main-window" title="thaiWitter"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  width="420" height="720" persist="width height top left">
+<toolbox flex="1">
+  <script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/>
+  <keyset id="editMenuKeys"/>
+  <commandset id="editMenuCommands"/>
+  <commandset id="cmdset_main">
+    <command id="cmd_quit" label="Quit" oncommand="goQuitApplication()"/>
+    <command id="cmd_close" label="Close" oncommand="window.close()"/>
+    <command id="cmd_minimizeWindow" label="Minimize" oncommand="window.minimize()"/>
+  </commandset>
+  <keyset id="keyset_main">
+    <key id="key_quit" modifiers="accel" key="q" command="cmd_quit"/>
+    <key id="key_close" modifiers="accel" key="w" command="cmd_close"/>
+    <key id="key_minimizeWindow" modifiers="accel" key="m" command="cmd_minimizeWindow"/>
+  </keyset>
+  <menuitem id="menu_FileQuitItem" label="Quit #thaiWitter" hidden="true" key="key_quit" command="cmd_quit" />
+  <menubar id="menu" hidden="true">
+    <menu id="menu_edit">
+      <menupopup id="editmenu-popup">
+        <menuitem id="menu_undo"/>
+        <menuitem id="menu_redo"/>
+        <menuseparator/>
+        <menuitem id="menu_cut"/>
+        <menuitem id="menu_copy"/>
+        <menuitem id="menu_paste"/>
+        <menuitem id="menu_delete"/>
+        <menuseparator/>
+        <menuitem id="menu_selectAll"/>
+      </menupopup>
+    </menu>
+  </menubar>
+  <browser id="browser_content"
+    flex="1"
+    type="content-primary"
+    context="popup_content"
+    tooltip="tooltip_content"
+    autocompletepopup="popup_autocomplete" />
+  <script type="text/javascript" src="twclient.js"></script>
+  <script src="main.js"></script>
+</toolbox>
+</window>
