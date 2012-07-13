@@ -3,4 +3,7 @@ osx/thaiWitter.app
 win/xulrunner
 win/thaiWitterPortable.exe
 win/App/thaiWitterClient
+win/7z.exe
+win/thaiWitterClientPortable-*.7z
+win/thaiWitterClientPortable-*.zip
 .DS_Store
