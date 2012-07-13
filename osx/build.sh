@@ -25,6 +25,10 @@ link_or_copy() {
 
 link_or_copy ../../../tw/ Resources
 
+if [ "$CONFIGURATION" = "Release" ]; then
+  rm Resources/defaults/preferences/debug.js
+fi
+
 mkdir Frameworks
 rsync -rlv /Library/Frameworks/XUL.framework/Versions/13.0.2/ Frameworks/XUL.framework
 rsync -rlv ../../Contents/ .
