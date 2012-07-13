@@ -8,3 +8,5 @@ pref("browser.chromeURL", "chrome://tw/content/tw.xul");
 pref("network.protocol-handler.warn-external.http", false);
 pref("network.protocol-handler.warn-external.https", false);
 
+// allow http images in https
+pref("security.warn_viewing_mixed", false);
