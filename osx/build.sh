@@ -23,7 +23,7 @@ link_or_copy() {
   fi
 }
 
-link_or_copy ../../../tw Resources
+link_or_copy ../../../tw/ Resources
 
 mkdir Frameworks
 rsync -rlv /Library/Frameworks/XUL.framework/Versions/13.0.2/ Frameworks/XUL.framework
