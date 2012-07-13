@@ -8,7 +8,7 @@ A #thaiWitter client developed on __XULRunner 13.0.2__.
 It is basically a site-specific browser for [#thaiWitter web application](https://tw3.herokuapp.com/)
 with few APIs added to the window, such as notification, link opening, cross-domain XHR, and userstreaming.
 
-It also has a script to build a packaged application for Mac OS X and <del>Windows</del> (coming soon)
+It also has a script to build a packaged application for Mac OS X and Windows
 and <del>Linux</del> (maybe).
 
 Part of this code is adapted from [Mozilla Prism](https://developer.mozilla.org/en/Prism/).
