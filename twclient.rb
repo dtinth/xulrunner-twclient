@@ -19,8 +19,8 @@ module TwClient
     @@version
   end
 
-  def self.build_name
-    "thaiWitterClient-#{version}-#{build_id}"
+  def self.build_name(variant='')
+    "thaiWitterClient#{variant}-#{version}-#{build_id}"
   end
 
 end
