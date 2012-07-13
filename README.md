@@ -27,4 +27,7 @@ kind of a configuration file.
 
 License
 -------
-MPL
+The code for this project is released under [MPL v2.0](http://mozilla.org/MPL/2.0/)
+
+
+
