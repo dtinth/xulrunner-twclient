@@ -1,6 +1,7 @@
 osx/thaiWitter-DEV.app
 osx/thaiWitter.app
 osx/XUL.framework
+osx/thaiWitterClient*.app.zip
 win/xulrunner
 win/thaiWitterPortable.exe
 win/App/thaiWitterClient
