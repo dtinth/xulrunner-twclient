@@ -4,9 +4,11 @@
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- Some of these codes are adapted from Mozilla Prism, licensed MPL 1.1 -->
 <window id="tw-main-window" title="thaiWitter"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-  width="420" height="720" persist="width height top left">
+  width="420" height="720" persist="width height top left"
+  macanimationtype="document">
 <toolbox flex="1">
   <script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/>
   <keyset id="editMenuKeys"/>
@@ -14,13 +16,27 @@
   <commandset id="cmdset_main">
     <command id="cmd_quit" label="Quit" oncommand="goQuitApplication()"/>
     <command id="cmd_close" label="Close" oncommand="window.close()"/>
-    <command id="cmd_minimizeWindow" label="Minimize" oncommand="window.minimize()"/>
+    <command id="cmd_zoomIn" label="Zoom In" oncommand="zoom.zoomIn()"/>
+    <command id="cmd_zoomOut" label="Zoom Out" oncommand="zoom.zoomOut()"/>
+    <command id="cmd_zoomReset" label="Reset Zoom" oncommand="zoom.reset()"/>
+    <command id="cmd_fullScreen" label="Full Screen" oncommand="window.fullScreen = !window.fullScreen"/>
+    <command id="cmd_minimizeWindow" label="Minimize" oncommand="window.minimize()" />
   </commandset>
   <keyset id="keyset_main">
     <key id="key_quit" modifiers="accel" key="q" command="cmd_quit"/>
     <key id="key_close" modifiers="accel" key="w" command="cmd_close"/>
     <key id="key_minimizeWindow" modifiers="accel" key="m" command="cmd_minimizeWindow"/>
+    <key id="key_hideThisApp" key="H" modifiers="accel"/>
+    <key id="key_hideOtherApps" key="H" modifiers="accel,alt"/>
+    <key id="key_fullScreen" keycode="VK_F11" command="cmd_fullScreen"/>
+    <key                     keycode="F" modifiers="accel,shift" command="cmd_fullScreen"/>
+    <key id="key_zoomIn" key="+" modifiers="accel" command="cmd_zoomIn"/>
+    <key                 key="=" modifiers="accel" command="cmd_zoomIn"/>
+    <key id="key_zoomOut" key="-" modifiers="accel" command="cmd_zoomOut"/>
+    <key id="key_zoomReset" key="0" modifiers="accel" command="cmd_zoomReset"/>
   </keyset>
+  <menuitem id="menu_mac_hide_app" label="Hide thaiWitterClient" hidden="true" key="key_hideThisApp"/>
+  <menuitem id="menu_mac_hide_others" label="Hide Others" hidden="true" key="key_hideOtherApps"/>
   <menuitem id="menu_FileQuitItem" label="Quit #thaiWitter" hidden="true" key="key_quit" command="cmd_quit" />
   <menubar id="menu" hidden="true">
     <menu id="menu_edit">
