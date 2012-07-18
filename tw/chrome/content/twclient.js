@@ -103,6 +103,26 @@ function registerClientExtensionFunction(w) {
 		alertsService.showAlertNotification(picture, title, text);
 	};
 
+	var icon = {
+		get badgeText() {
+			try {
+				var dock = Components.classes["@mozilla.org/widget/macdocksupport;1"]
+					.getService(Components.interfaces.nsIMacDockSupport);
+				return dock.badgeText;
+			} catch (e) {
+				return '';
+			}
+		},
+		set badgeText(text) {
+			try {
+				var dock = Components.classes["@mozilla.org/widget/macdocksupport;1"]
+					.getService(Components.interfaces.nsIMacDockSupport);
+				dock.badgeText = text;
+			} catch (e) {
+			}
+		}
+	}
+
 	w.platform = {
 		showNotification: w.thaiWitterClientNotify,
 		openURI: function(url) {
@@ -112,6 +132,9 @@ function registerClientExtensionFunction(w) {
 			var extps = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"]
 				.getService(Components.interfaces.nsIExternalProtocolService);
 			extps.loadURI(uriToOpen, null);
+		},
+		icon: function() {
+			return icon;
 		}
 	};
 
