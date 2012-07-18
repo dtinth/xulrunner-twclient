@@ -1,9 +1,11 @@
 osx/thaiWitter-DEV.app
 osx/thaiWitter.app
+osx/XUL.framework
 win/xulrunner
 win/thaiWitterPortable.exe
 win/App/thaiWitterClient
 win/7z.exe
 win/thaiWitterClientPortable-*.7z
 win/thaiWitterClientPortable-*.zip
+linux/xulrunner
 .DS_Store
