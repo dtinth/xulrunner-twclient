@@ -5,6 +5,7 @@ osx/thaiWitterClient*.app.zip
 win/xulrunner
 win/thaiWitterPortable.exe
 win/App/thaiWitterClient
+win/Data
 win/7z.exe
 win/thaiWitterClientPortable-*.7z
 win/thaiWitterClientPortable-*.zip
