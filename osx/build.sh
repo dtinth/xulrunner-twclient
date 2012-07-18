@@ -4,6 +4,7 @@ set -e
 set -x
 
 TARGET="thaiWitter-DEV"
+XULFRAMEWORK="`pwd`/XUL.framework/"
 
 if [ "$CONFIGURATION" = "Release" ]; then
   TARGET="thaiWitter"
@@ -30,7 +31,7 @@ if [ "$CONFIGURATION" = "Release" ]; then
 fi
 
 mkdir Frameworks
-rsync -rlv /Library/Frameworks/XUL.framework/Versions/13.0.2/ Frameworks/XUL.framework
+rsync -rlv "$XULFRAMEWORK" Frameworks/XUL.framework
 rsync -rlv ../../Contents/ .
 
 mkdir MacOS
