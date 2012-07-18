@@ -1,0 +1,11 @@
+
+INSTALLATION
+============
+
+Download and exteact the xulrunner runtime that corresponds to your computer
+architecture from:
+
+  http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/14.0.1/runtimes/
+
+Then, move the "xulrunner" folder into "twclient" folder.
+
