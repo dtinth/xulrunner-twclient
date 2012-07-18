@@ -36,7 +36,7 @@ rsync -rlv ../../Contents/ .
 
 mkdir MacOS
 cd MacOS
-cp ../Frameworks/XUL.framework/xulrunner .
+cp ../Frameworks/XUL.framework/Versions/Current/xulrunner .
 for I in ../Frameworks/XUL.framework/*.dylib; do ln -s "$I"; done
 
 
