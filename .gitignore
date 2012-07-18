@@ -8,4 +8,6 @@ win/7z.exe
 win/thaiWitterClientPortable-*.7z
 win/thaiWitterClientPortable-*.zip
 linux/xulrunner
+linux/thaiWitter
+linux/thaiWitterClient*.tar.bz2
 .DS_Store
