@@ -34,9 +34,6 @@ mkdir Frameworks
 rsync -rlv "$XULFRAMEWORK" Frameworks/XUL.framework
 rsync -rlv ../../Contents/ .
 
-mkdir MacOS
-cd MacOS
-cp ../Frameworks/XUL.framework/Versions/Current/xulrunner .
-for I in ../Frameworks/XUL.framework/*.dylib; do ln -s "$I"; done
+for I in ../Frameworks/XUL.framework/Versions/Current/*.dylib; do ln -s "$I"; done
 
 

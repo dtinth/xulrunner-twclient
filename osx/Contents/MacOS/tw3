@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "`dirname "$0"`"
+HERE=`pwd`
+THERE="`(cd ../Resources && pwd)`"
+../Frameworks/XUL.framework/Versions/Current/xulrunner "$THERE/application.ini"
+
